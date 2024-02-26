@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://springboot32.database.windows.net:1433;database=users;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-    username: spring
-    password: Rufaid@123
+    url: jdbc:sqlserver://user1534.database.windows.net:1433;database=userdetails;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: User
+    password: Use@1234
   jpa:
     show-sql: true
     hibernate:
@@ -11,6 +11,10 @@ spring:
 
 server:
   port: 9081
+
+
+
+
 
 
 
