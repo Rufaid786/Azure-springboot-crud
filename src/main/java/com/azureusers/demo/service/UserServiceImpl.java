@@ -17,8 +17,15 @@ public class UserServiceImpl implements Userservice{
     Dao dao;
 
     @Override
-    public User addUser(User user) {
-        return dao.save(user);
+    public String addUser(User user) {
+        Optional<User> us=dao.findById(user.getId());
+        if(us.isEmpty()){
+        dao.save(user);
+        return "User added successfully with id "+user.getId();
+        }
+        else{
+            return "user cannot be added..please recheck the details provided";
+        }
     }
 
     @Override
