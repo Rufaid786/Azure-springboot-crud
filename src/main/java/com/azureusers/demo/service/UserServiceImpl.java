@@ -13,8 +13,13 @@ import java.util.Optional;
 @Service
 @Transactional
 public class UserServiceImpl implements Userservice{
+
+
+    private final Dao dao;
     @Autowired
-    Dao dao;
+    public UserServiceImpl(Dao dao){
+        this.dao=dao;
+    }
 
     @Override
     public String addUser(User user) {
